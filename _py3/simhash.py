@@ -50,3 +50,11 @@ class Repeat:
         ver_sum = ver.sum(axis=0)
         sim = ''.join(['1' if x > 0 else '0' for x in ver_sum])
         return sim
+
+    @staticmethod
+    def haiming(s1, s2):
+        x = 0
+        for i in zip(s1, s2):
+            if i[0] != i[1]:
+                x += 1
+        return x
