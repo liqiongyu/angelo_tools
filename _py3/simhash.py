@@ -50,3 +50,7 @@ class Repeat:
         ver_sum = ver.sum(axis=0)
         sim = ''.join(['1' if x > 0 else '0' for x in ver_sum])
         return sim
+
+    def _hamming(self, s1, s2):
+        d = [1 if a1 == a2 else 0 for a1, a2 in zip(s1, s2)].count(1)
+        return d
